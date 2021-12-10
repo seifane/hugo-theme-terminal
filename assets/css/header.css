@@ -10,6 +10,12 @@
   z-index: 99;
 }
 
+@keyframes caretAnimation {
+  0%{opacity: 100%}
+  50%{opacity:0%}
+  100%{opacity:100%}
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -29,12 +35,31 @@
     display: flex;
     flex: 1;
 
-    &:after {
-      content: '';
-      background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px);
-      display: block;
-      width: 100%;
-      right: 10px;
+    &__caret{
+      display: flex;
+      margin-left: 1ch;
+      p {
+        margin: 0;
+      }
+    }
+
+    &__caret__linear{
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      p {
+        letter-spacing: -3px;
+      }
+    }
+
+    &__caret__wave{
+      color: var(--accent);
+      float: left;
+      display: flex;
+      align-items: center;
+      p {
+        animation: caretAnimation 2s linear infinite;
+      }
     }
 
     a {
