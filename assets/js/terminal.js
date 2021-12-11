@@ -1,7 +1,6 @@
 const speed = 80;
 const variation = 100;
-let last_index = -1;
-let texts = [
+const texts = [
     "rm -rf /",
     "ping google.com",
     "rm -rf / --no-preserve-root",
@@ -20,12 +19,13 @@ let texts = [
     "Gas Gas Gas",
     "I'm running arch btw",
     "Total Installed Size:  10960.10 MiB",
-    "Fuck you Nvidia - Linus Torvalds",
+    "\"Fuck you Nvidia\" - Linus Torvalds",
     "That's a lot of damage !",
     "Wake UP, Neo...",
     "Follow the white rabbit"
 ]
 
+let last_index = -1;
 let done_texts = []
 
 function getRandomInt(max) {
@@ -68,7 +68,7 @@ async function displayText() {
     while (true) {
         let i = getRandomTextIndex();
         await typeWriter(texts[i]);
-        await timeout(1000);
+        await timeout(3000);
         document.getElementById("terminal_text").innerHTML = '';
         await timeout(200);
         last_index = i;
