@@ -9,7 +9,10 @@ module.exports = function(api) {
       },
     ],
   ];
-  const plugins = [];
+  const plugins = [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-transform-runtime'
+  ];
 
   return {
     presets,

@@ -13,6 +13,7 @@ module.exports = (env, { mode }) => ({
   },
   entry: {
     main: join("assets", "js", "menu.js"),
+    terminal: join("assets", "js", "terminal.js"),
     languageSelector: join("assets", "js", "languageSelector.js"),
     prism: join("assets", "js", "prism.js"),
     style: join("assets", "css", "style.css"),

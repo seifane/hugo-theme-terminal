@@ -49,6 +49,7 @@
       align-items: center;
       p {
         letter-spacing: -3px;
+        white-space: nowrap;
       }
     }
 
@@ -57,7 +58,16 @@
       float: left;
       display: flex;
       align-items: center;
-      p {
+      max-width: 100%;
+      
+      #terminal_text{
+        max-width: calc(100vw - 238px);
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        white-space: nowrap;
+      }
+      span {
         animation: caretAnimation 2s linear infinite;
       }
     }
