@@ -1,0 +1,3 @@
+<div class="textzone">
+    <p {{ with .Get "color" }} style="color: {{ . }}" {{ end }}>{{ .Inner | string }}</p>
+</div>

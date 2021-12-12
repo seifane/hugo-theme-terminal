@@ -1,0 +1,12 @@
+.textzone {
+    border: 1px solid hsla(0,0%,100%,.1);
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
